@@ -1,13 +1,23 @@
 class Board {
-    constructor () {
+    constructor (notificacion) {
+      this.notificacion = notificacion;
     }
 
-    changeColorNumber (number, element) {
-      /* Logic */
+    markNumber (number) {
+      let balotas = document.querySelectorAll('.number');
+      balotas.forEach(balota => {
+        if (parseInt(balota.textContent) === number) {
+          balota.classList.add('number-select');
+          this.notificacion.play();
+        }
+      });
     }
 
-    reset (document) {
-      /* Logic   */
+    reset () {
+      let balotas = document.querySelectorAll('.number');
+      balotas.forEach(balota => {
+        balota.classList.remove('number-select');
+      });
     }
 
     drawLetters () {
@@ -41,7 +51,8 @@ class Board {
         td.style.width = 'min-content';
         td.style.color = '#FFBA08';
         td.style.fontSize = '30px';
-        td.style.padding = '10px';
+        td.style.padding = '11px';
+        td.style.textAlign = 'center';
         td.textContent = i;
         tr.append(td);
         // Si ya se lleno una fila entonces los nuevos td

@@ -42,27 +42,43 @@ class LinkedListBalota {
     return null;
   }
 
+  removeLast () {
+    let tempBalota = this.head;
+    while (tempBalota.next.next !== null) {
+      tempBalota = tempBalota.next;
+    }
+    let balotaResult = tempBalota.next.number;
+    tempBalota.next = null;
+    return balotaResult;
+  }
+
   reset () {
     this.head = null;
     this.size = 0;
   }
 
   exists (number) {
-    let tempBalota = this.head;
-    while (tempBalota.next !== null) {
+    if (this.head !== null) {
+      let tempBalota = this.head;
+      while (tempBalota.next !== null) {
+        if (tempBalota.number === number) return true;
+        tempBalota = tempBalota.next;
+      }
+      //Validamos el ultimo elemento
       if (tempBalota.number === number) return true;
-      tempBalota = tempBalota.next;
+      return false;
     }
-    return false;
   }
 
   list () {
-    let tempNode = this.head;
-    while (tempNode.next !== null) {
+    if (this.head !== null) {
+      let tempNode = this.head;
+      while (tempNode.next !== null) {
+        console.log(tempNode.number);
+        tempNode = tempNode.next;
+      }
       console.log(tempNode.number);
-      tempNode = tempNode.next;
     }
-    console.log(tempNode.number)
   }
 
   getSize () {
