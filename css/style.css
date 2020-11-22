@@ -17,26 +17,20 @@ body {
 }
 input {
   cursor: pointer;
+  color: white;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 17px;
+  font-size: 15px;
+  font-weight: bolder;
 }
 input:first-child {
   background: #D00000;
-  color: white;
   border: 2px solid #9D0208;
-  padding: 8px 14px;
-  margin: 15px;
-  border-radius: 17px;
-  font-size: 15px;
-  font-weight: bolder;
 }
 input:last-child {
   background: #FFBA08;
-  color: white;
   border: 2px solid #F48C06;
-  padding: 8px 14px;
-  margin: 15px;
-  border-radius: 17px;
-  font-size: 15px;
-  font-weight: bolder;
 }
 input:first-child:hover {
   background: #9D0208;
