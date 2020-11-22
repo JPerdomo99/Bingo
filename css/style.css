@@ -6,26 +6,22 @@
 body {
   background: #03071E;
 }
-#name {
-  text-align: center;
-  margin: 20px;
-  font-size: 40px;
-  color: #9D0208;
-  font-weight: bold;
-}
-#email {
+p {
+  margin-top: 80px;
   font-size: small;
   color: #9D0208;
   font-weight: bold;
   text-align: center;
-  position: absolute;
+  font-size: x-small;
   bottom: 0;
 }
 #board {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 #action-container {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
