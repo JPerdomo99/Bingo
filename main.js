@@ -44,6 +44,7 @@ class Main {
         (this.linkedListBalota.getSize() === 0) ? this.gameOver.play() : null;
       } else {
         console.log('La lista enlazada no tiene mas balotas (nodos)');
+        this.reset();
       }
       button.disabled = false;
     }
