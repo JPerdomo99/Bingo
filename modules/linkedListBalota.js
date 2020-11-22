@@ -22,7 +22,7 @@ class LinkedListBalota {
   }
 
   remove (number) {
-    if (this.exits(number)) {
+    if (this.exists(number)) {
         let tempBalota = this.head;
         if (tempBalota.number === number) {
           this.head = tempBalota.next;
@@ -36,6 +36,7 @@ class LinkedListBalota {
             this.decreaseSize();
             return balotaResult;
           }
+          tempBalota = tempBalota.next;
         }
     }
     return null;
@@ -46,10 +47,11 @@ class LinkedListBalota {
     this.size = 0;
   }
 
-  exits (number) {
+  exists (number) {
     let tempBalota = this.head;
     while (tempBalota.next !== null) {
       if (tempBalota.number === number) return true;
+      tempBalota = tempBalota.next;
     }
     return false;
   }

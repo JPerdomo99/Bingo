@@ -17,6 +17,14 @@ class StackBalota {
     this.balotas = [];
     this.top = -1;
   }
+
+  list () {
+    let i = 0;
+    while (i < this.top + 1) {
+      console.log(this.balotas[i]);
+      i = i + 1;
+    }
+  }
 }
 
 export { StackBalota };

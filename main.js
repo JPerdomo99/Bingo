@@ -22,12 +22,21 @@ class Main {
         this.linkedListBalota.add(i);
         i = i + 1;
       }
-      this.linkedListBalota.list();
     }
 
     newBalota () {
       let randomNumber = this.generateNumber();
-
+      if (this.linkedListBalota.getSize() < 75) {
+        while (this.linkedListBalota.exists(randomNumber) === false) {
+          randomNumber = this.generateNumber();
+        }
+      }
+      console.log('random', randomNumber)
+      this.stackBalota.push(this.linkedListBalota.remove(randomNumber));
+      console.log('LinkedList');
+      this.linkedListBalota.list();
+      console.log('stack');
+      this.stackBalota.list();
     }
 
     generateNumber () {
