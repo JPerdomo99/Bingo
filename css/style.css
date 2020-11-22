@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+}
+body {
+  background: #03071E;
+}
+#board {
+  display: flex;
+}
+input {
+  cursor: pointer;
+}
+input:first-child {
+  background: #D00000;
+  color: white;
+  border: 2px solid #9D0208;
+  padding: 8px 14px;
+  margin: 15px;
+  border-radius: 17px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+input:last-child {
+  background: #FFBA08;
+  color: white;
+  border: 2px solid #F48C06;
+  padding: 8px 14px;
+  margin: 15px;
+  border-radius: 17px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+input:first-child:hover {
+  background: #9D0208;
+}
+input:last-child:hover {
+  background: #F48C06;
+}
+#sign-board {
+  width: 150px;
+  border: 3px solid #D00000;
+  border-radius: 7px;
+  margin: 15px;
+  color: #FAA307;
+  font-size: 46px;
+  text-align: center;
+  height: max-content;
+}
+.number {
+  border-radius: 50%;
+}
